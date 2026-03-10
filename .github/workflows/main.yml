@@ -1,4 +1,4 @@
-name: Simple CI Pipeline
+name: CI/CD Pipeline Demo
 
 on:
   push:
@@ -12,5 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Run a test command
-        run: echo "CI/CD Pipeline is working!"
+      - name: Display repository files
+        run: ls -la
+
+      - name: Run CI test command
+        run: echo "Build successful!"
+
+      - name: Simulate deployment
+        run: echo "Application deployed successfully!"
